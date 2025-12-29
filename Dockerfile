@@ -13,7 +13,7 @@ RUN apt-get update && apt-get install -y \
 
 RUN gem install bundler --no-document
 
-RUN export PATH="$PWD/lib/.gems/bin:$PATH"
+RUN export PATH="$PWD/lib/.gems/ruby/3.3.0/bin:$PATH"
 
 WORKDIR /workspace
 
