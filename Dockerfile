@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
 
 RUN gem install bundler --no-document
 
+RUN export PATH="$PWD/lib/.gems/bin:$PATH"
+
 WORKDIR /workspace
 
 CMD ["/bin/bash"]
