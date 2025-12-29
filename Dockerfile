@@ -1,6 +1,6 @@
 FROM debian:13.2-slim
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get install -y --no-install-recommends \
     make \
     python3 \
     python3-pip \
@@ -9,7 +9,9 @@ RUN apt-get update && apt-get install -y \
     ruby-dev \
     build-essential \
     git \
-    dos2unix
+    dos2unix \
+    ghostscript \
+    enscript
 
 RUN gem install bundler --no-document
 
